@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content=",">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="U：“你用过最强大的编辑器是什么？”M：“Sublime Text”U：“你用过最好看的编辑器是什么？”M：“Atom”U：“你用过最方便的编辑器是什么？”M：“Visual Studio Code” &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;曾经 Atom 的外观让我着迷，就算加载速度比较慢，我还是用了很长一段时间。但是自从用上了 VS-code再也回不去 Atom 了，就算他看上去不是那">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VS-Code插件推荐">
+<meta property="og:url" content="http://yoursite.com/vscode-extensions.html">
+<meta property="og:site_name" content="woolson&#39;s blog">
+<meta property="og:description" content="U：“你用过最强大的编辑器是什么？”M：“Sublime Text”U：“你用过最好看的编辑器是什么？”M：“Atom”U：“你用过最方便的编辑器是什么？”M：“Visual Studio Code” &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;曾经 Atom 的外观让我着迷，就算加载速度比较慢，我还是用了很长一段时间。但是自从用上了 VS-code再也回不去 Atom 了，就算他看上去不是那">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://raw.githubusercontent.com/eamodio/vscode-gitlens/master/images/gitlens-logo.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/eamodio/vscode-gitlens/master/images/gitlens-preview.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/VSCodeVim/Vim/master/images/icon.png">
+<meta property="og:image" content="https://github.com/alekseychaikovsky/vscode-linejumper/raw/master/images/demo.gif">
+<meta property="og:image" content="https://hookyqr.gallerycdn.vsassets.io/extensions/hookyqr/beautify/1.3.0/1516928994563/Microsoft.VisualStudio.Services.Icons.Default">
+<meta property="og:image" content="https://editorconfig.gallerycdn.vsassets.io/extensions/editorconfig/editorconfig/0.12.4/1527781734664/Microsoft.VisualStudio.Services.Icons.Default">
+<meta property="og:image" content="https://spywhere.gallerycdn.vsassets.io/extensions/spywhere/guides/0.9.1/1511022656558/Microsoft.VisualStudio.Services.Icons.Default">
+<meta property="og:image" content="https://github.com/spywhere/vscode-guides/raw/master/images/screenshot.png">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/708e7d29gy1fs6i2zird5j219o0kcjx5">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/708e7d29gy1fs3yfw1ojcj21860b8aby">
+<meta property="og:image" content="https://pkief.gallerycdn.vsassets.io/extensions/pkief/material-icon-theme/3.5.0/1527764102171/Microsoft.VisualStudio.Services.Icons.Default">
+<meta property="og:image" content="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/master/images/fileIcons.png">
+<meta property="og:image" content="https://octref.gallerycdn.vsassets.io/extensions/octref/vetur/0.12.5/1528324426695/Microsoft.VisualStudio.Services.Icons.Default">
+<meta property="og:image" content="https://thenikso.gallerycdn.vsassets.io/extensions/thenikso/github-plus-theme/1.1.3/1526373532357/Microsoft.VisualStudio.Services.Icons.Default">
+<meta property="og:image" content="https://github.com/thenikso/github-plus-theme/raw/master/screenshot.jpg">
+<meta property="og:image" content="https://woolson.github.io/weibo-img/static/img/etc-1.4fce764.png">
+<meta property="og:image" content="https://gruntfuggly.gallerycdn.vsassets.io/extensions/gruntfuggly/todo-tree/0.0.73/1532952758588/Microsoft.VisualStudio.Services.Icons.Default">
+<meta property="og:image" content="https://raw.githubusercontent.com/Gruntfuggly/todo-tree/master/resources/screenshot.png">
+<meta property="og:image" content="https://wayou.gallerycdn.vsassets.io/extensions/wayou/vscode-todo-highlight/1.0.4/1532254554587/Microsoft.VisualStudio.Services.Icons.Default">
+<meta property="og:image" content="https://github.com/wayou/vscode-todo-highlight/raw/master/assets/material-night.png">
+<meta property="og:updated_time" content="2018-11-06T10:10:43.641Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VS-Code插件推荐">
+<meta name="twitter:description" content="U：“你用过最强大的编辑器是什么？”M：“Sublime Text”U：“你用过最好看的编辑器是什么？”M：“Atom”U：“你用过最方便的编辑器是什么？”M：“Visual Studio Code” &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;曾经 Atom 的外观让我着迷，就算加载速度比较慢，我还是用了很长一段时间。但是自从用上了 VS-code再也回不去 Atom 了，就算他看上去不是那">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/eamodio/vscode-gitlens/master/images/gitlens-logo.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/vscode-extensions.html">
+
+
+
+
+
+  <title>VS-Code插件推荐 | woolson's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">woolson's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-h-square"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-projects">
+          <a href="/projects/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-product-hunt"></i> <br>
+            
+            项目
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/vscode-extensions.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="woolson">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="woolson's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">VS-Code插件推荐</h2>
+        
+
+        <div class="post-meta">
+          
+            <span class="post-pin-top">
+              <i class="fa fa-thumb-tack"></i>
+              <span>置顶</span>
+            </span>
+            <span class="post-meta-divider">|</span>
+          
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-08T20:00:00+08:00">
+                2018-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/vscode-extensions.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="vscode-extensions.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>U：“你用过最强大的编辑器是什么？”<br>M：“Sublime Text”<br>U：“你用过最好看的编辑器是什么？”<br>M：“Atom”<br>U：“你用过最方便的编辑器是什么？”<br>M：“Visual Studio Code”</p>
+<p>&ensp;&ensp;&ensp;&ensp;曾经 <code>Atom</code> 的外观让我着迷，就算加载速度比较慢，我还是用了很<br>长一段时间。但是自从用上了 <code>VS-code</code>再也回不去 <code>Atom</code> 了，就算他看上去不是那么好看。但<br>是他的启动速度和插件的质量，相对来说有一定的优势的。还有一些细节上面的配置更友好。</p>
+<p>下面就推荐一些我个人觉得不错的插件：</p>
+<h2 id="Gitlens"><a href="#Gitlens" class="headerlink" title="Gitlens"></a>Gitlens</h2><p align="center"><br>  <img src="https://raw.githubusercontent.com/eamodio/vscode-gitlens/master/images/gitlens-logo.png" alt="GitLens Logo" width="328"><br></p>
+
+<blockquote>
+<p>主要是组织git提交记录并在你的代码中展示修改人和修改时间，很强大</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/eamodio/vscode-gitlens/master/images/gitlens-preview.gif" alt="gitlens"></p>
+<h2 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h2><p align="center"><br>  <img src="https://raw.githubusercontent.com/VSCodeVim/Vim/master/images/icon.png" height="128" width="128"><br>  <br>VS-Code Vim模拟器<br></p>
+
+<blockquote>
+<p>喜欢用vim编辑器的同学必须装的，挺不错的。推荐加一个插件 <code>line-jumper</code></p>
+</blockquote>
+<h2 id="Line-jumper"><a href="#Line-jumper" class="headerlink" title="Line-jumper"></a>Line-jumper</h2><p>&ensp;&ensp;&ensp;&ensp;vim有翻半页和一页的快捷键。有时候vim的翻半页或者翻一页太多，但是一行一行翻又太慢。所以有个能介于半页和一行之间的跳行。就使用line-jumper这个插件，可配置一次跳多少行，我是5行。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 行数设置</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"lineJumper.linesToJump"</span>: <span class="number">5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// 快捷键设置</span><br><span class="line">[</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"key"</span>: <span class="string">"ctrl+j"</span>,</span><br><span class="line">    <span class="attr">"command"</span>: <span class="string">"lineJumper.moveDown"</span>,</span><br><span class="line">    <span class="attr">"when"</span>: <span class="string">"editorTextFocus"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"key"</span>: <span class="string">"ctrl+cmd+j"</span>,</span><br><span class="line">    <span class="attr">"command"</span>: <span class="string">"lineJumper.selectDown"</span>,</span><br><span class="line">    <span class="attr">"when"</span>: <span class="string">"editorTextFocus"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"key"</span>: <span class="string">"ctrl+k"</span>,</span><br><span class="line">    <span class="attr">"command"</span>: <span class="string">"lineJumper.moveUp"</span>,</span><br><span class="line">    <span class="attr">"when"</span>: <span class="string">"editorTextFocus"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"key"</span>: <span class="string">"ctrl+cmd+k"</span>,</span><br><span class="line">    <span class="attr">"command"</span>: <span class="string">"lineJumper.selectUp"</span>,</span><br><span class="line">    <span class="attr">"when"</span>: <span class="string">"editorTextFocus"</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p><img src="https://github.com/alekseychaikovsky/vscode-linejumper/raw/master/images/demo.gif" alt="line-jumper"></p>
+<h2 id="Beautify"><a href="#Beautify" class="headerlink" title="Beautify"></a>Beautify</h2><p align="center"><br>  <img src="https://hookyqr.gallerycdn.vsassets.io/extensions/hookyqr/beautify/1.3.0/1516928994563/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128"><br>  <br>代码格式化插件 Beautify<br></p>
+
+<blockquote>
+<p>代码格式化插件，不用多说。</p>
+</blockquote>
+<h2 id="EditorConfig-for-VS-Code"><a href="#EditorConfig-for-VS-Code" class="headerlink" title="EditorConfig for VS Code"></a>EditorConfig for VS Code</h2><p align="center"><br>  <img src="https://editorconfig.gallerycdn.vsassets.io/extensions/editorconfig/editorconfig/0.12.4/1527781734664/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128"><br>  <br>编辑器设置<br></p>
+
+<blockquote>
+<p>如果你打开的项目根目录存在 <code>editorconfig</code> 文件，则会用文件中的配置覆盖编辑器默认设置</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># editorconfig.org</span><br><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">indent_size = 2</span><br><span class="line">indent_style = tab</span><br><span class="line">end_of_line = lf</span><br><span class="line">charset = utf-8</span><br><span class="line">trim_trailing_whitespace = true</span><br><span class="line">insert_final_newline = true</span><br><span class="line"></span><br><span class="line">[*.md]</span><br><span class="line">trim_trailing_whitespace = false</span><br></pre></td></tr></table></figure>
+<h2 id="Guides"><a href="#Guides" class="headerlink" title="Guides"></a>Guides</h2><p align="center"><br>  <img src="https://spywhere.gallerycdn.vsassets.io/extensions/spywhere/guides/0.9.1/1511022656558/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128"><br>  <br>编辑器缩进导航<br></p>
+
+<blockquote>
+<p>用来扩展编辑器缩进导航显示，可以自定义的样式也很多</p>
+</blockquote>
+<p><img src="https://github.com/spywhere/vscode-guides/raw/master/images/screenshot.png" alt="官方"></p>
+<p>自定义样式  </p>
+<p><img src="http://ww1.sinaimg.cn/large/708e7d29gy1fs6i2zird5j219o0kcjx5" alt=""></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// 暗色系主题使用的活动状态引导线颜色</span></span><br><span class="line">  <span class="string">"guides.active.color.dark"</span>: <span class="string">"rgba(120, 60, 60, 0.75)"</span>,</span><br><span class="line">  <span class="comment">// 明色系主题使用的活动状态引导线颜色</span></span><br><span class="line">  <span class="string">"guides.active.color.light"</span>: <span class="string">"rgba(200, 100, 100, 0.75)"</span>,</span><br><span class="line">  <span class="comment">// 是否使用活动引导线</span></span><br><span class="line">  <span class="string">"guides.active.enabled"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 是否在括号行展开活动引导线</span></span><br><span class="line">  <span class="string">"guides.active.expandBrackets"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 水平引动引导线，这将会渲染出多余的引导线</span></span><br><span class="line">  <span class="string">"guides.active.extraIndent"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">// 除正常引导线，在沟槽区启用活动引导线指示器</span></span><br><span class="line">  <span class="string">"guides.active.gutter"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">// 选中文字隐藏引导线</span></span><br><span class="line">  <span class="string">"guides.active.hideOnSelection"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 活动状态引导线样式</span></span><br><span class="line">  <span class="string">"guides.active.style"</span>: <span class="string">"solid"</span>,</span><br><span class="line">  <span class="comment">// 活动状态引导线宽度</span></span><br><span class="line">  <span class="string">"guides.active.width"</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="comment">// 启用此插件</span></span><br><span class="line">  <span class="string">"guides.enabled"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 缩进背景颜色</span></span><br><span class="line">  <span class="string">"guides.indent.backgrounds"</span>: [],</span><br><span class="line">  <span class="comment">// 选中文字隐藏引导线背景</span></span><br><span class="line">  <span class="string">"guides.indent.hideBackgroundOnSelection"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 是否显示第一列引导线</span></span><br><span class="line">  <span class="string">"guides.indent.showFirstIndentGuides"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 基于当前光标位置最大渲染数. 设置-1为无限制. 使用浮点数0-1之间由文档大小来确定</span></span><br><span class="line">  <span class="string">"guides.limit.maximum"</span>: <span class="number">500</span>,</span><br><span class="line">  <span class="comment">// 暗色系普通引导线颜色</span></span><br><span class="line">  <span class="string">"guides.normal.color.dark"</span>: <span class="string">"rgba(60, 60, 60, 0.75)"</span>,</span><br><span class="line">  <span class="comment">// 明色系普通引导线颜色</span></span><br><span class="line">  <span class="string">"guides.normal.color.light"</span>: <span class="string">"rgba(220, 220, 220, 0.75)"</span>,</span><br><span class="line">  <span class="comment">// 开启普通引导线</span></span><br><span class="line">  <span class="string">"guides.normal.enabled"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 选中文字隐藏普通引导线</span></span><br><span class="line">  <span class="string">"guides.normal.hideOnSelection"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 普通引导线样式</span></span><br><span class="line">  <span class="string">"guides.normal.style"</span>: <span class="string">"solid"</span>,</span><br><span class="line">  <span class="comment">// 普通引导线宽度</span></span><br><span class="line">  <span class="string">"guides.normal.width"</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="comment">// 覆盖vs-code默认的行为(比如：缩进引导线和尺寸线)</span></span><br><span class="line">  <span class="string">"guides.overrideDefault"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">// 发送匿名使用统计数据给开发者</span></span><br><span class="line">  <span class="string">"guides.sendUsagesAndStats"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 暗色系主题缩进引导线堆栈颜色</span></span><br><span class="line">  <span class="string">"guides.stack.color.dark"</span>: <span class="string">"rgba(80, 80, 80, 0.75)"</span>,</span><br><span class="line">  <span class="comment">// 明色系主题缩进引导线堆栈颜色</span></span><br><span class="line">  <span class="string">"guides.stack.color.light"</span>: <span class="string">"rgba(180, 180, 180, 0.75)"</span>,</span><br><span class="line">  <span class="comment">// 除正常引导线外显示堆栈引导线</span></span><br><span class="line">  <span class="string">"guides.stack.enabled"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 选中文字隐藏堆栈引导线</span></span><br><span class="line">  <span class="string">"guides.stack.hideOnSelection"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">// 堆栈引导线样式(solid/dashed/dotted)</span></span><br><span class="line">  <span class="string">"guides.stack.style"</span>: <span class="string">"solid"</span>,</span><br><span class="line">  <span class="comment">// 堆栈引导线宽度</span></span><br><span class="line">  <span class="string">"guides.stack.width"</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="comment">// 引导线间更新间隔(单位：秒)</span></span><br><span class="line">  <span class="string">"guides.updateDelay"</span>: <span class="number">0.1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/708e7d29gy1fs3yfw1ojcj21860b8aby" alt="indent"></p>
+<h2 id="Material-Icon-Theme"><a href="#Material-Icon-Theme" class="headerlink" title="Material Icon Theme"></a>Material Icon Theme</h2><p align="center"><br>  <img src="https://pkief.gallerycdn.vsassets.io/extensions/pkief/material-icon-theme/3.5.0/1527764102171/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128"><br>  <br>资源管理器中文件图标<br></p>
+
+<blockquote>
+<p>该插件提供了大量的图标，还可以自己自定义图标。</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//  自定义文件夹图标</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"material-icon-theme.folders.associations"</span>: &#123;</span><br><span class="line">    // 文件夹名：图标名</span><br><span class="line">    "store": "Redux-store"</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/master/images/fileIcons.png" alt="icon"></p>
+<h2 id="Vetur"><a href="#Vetur" class="headerlink" title="Vetur"></a>Vetur</h2><p align="center"><br>  <img src="https://octref.gallerycdn.vsassets.io/extensions/octref/vetur/0.12.5/1528324426695/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128"><br>  <br>Vetur 用vue开发必装插件<br></p>
+
+<blockquote>
+<p>如果你是VUE的使用者，这个插件必选啊</p>
+</blockquote>
+<h2 id="推荐主题：github-plus"><a href="#推荐主题：github-plus" class="headerlink" title="推荐主题：github plus"></a>推荐主题：github plus</h2><p align="center"><br>  <img src="https://thenikso.gallerycdn.vsassets.io/extensions/thenikso/github-plus-theme/1.1.3/1526373532357/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128"><br>  <br>Github Plus Theme<br></p>
+
+<blockquote>
+<p>以前都是喜欢用暗色系的主题，久了后想换个亮一点的主题，然后找了一圈，这个主题真是超级喜欢。</p>
+</blockquote>
+<p><img src="https://github.com/thenikso/github-plus-theme/raw/master/screenshot.jpg" alt="github"></p>
+<h2 id="完事"><a href="#完事" class="headerlink" title="完事"></a>完事</h2><p>&ensp;&ensp;&ensp;&ensp;插件暂时介绍到这，后面有好用的再做推荐。这里推一个自己开发的基于新浪微博上传图片软件（有mac和win），具体查看<a href="https://woolson.github.io/weibo-img/#/" target="_blank" rel="noopener">这里</a>。</p>
+<p align="center"><br>  <img src="https://woolson.github.io/weibo-img/static/img/etc-1.4fce764.png" width="650"><br></p>
+
+<h1 id="2018-07-31更新"><a href="#2018-07-31更新" class="headerlink" title="2018-07-31更新"></a>2018-07-31更新</h1><h2 id="Todo-Tree"><a href="#Todo-Tree" class="headerlink" title="Todo Tree"></a>Todo Tree</h2><p align="center"><br>  <img src="https://gruntfuggly.gallerycdn.vsassets.io/extensions/gruntfuggly/todo-tree/0.0.73/1532952758588/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128"><br>  <br>Todo Tree<br></p>
+
+<blockquote>
+<p>列出项目中所有的TODO，侧面把握项目的完成度。点击可打开对应文件和TODO所在位置。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/Gruntfuggly/todo-tree/master/resources/screenshot.png" alt="官方"></p>
+<h2 id="TODO-Highlight"><a href="#TODO-Highlight" class="headerlink" title="TODO Highlight"></a>TODO Highlight</h2><p align="center"><br>  <img src="https://wayou.gallerycdn.vsassets.io/extensions/wayou/vscode-todo-highlight/1.0.4/1532254554587/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128"><br>  <br>TODO Highlight<br></p>
+
+<blockquote>
+<p>高亮打开的页面中所有TODO，看上去更清爽。</p>
+</blockquote>
+<p><img src="https://github.com/wayou/vscode-todo-highlight/raw/master/assets/material-night.png" alt="官方"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/" rel="tag"># </a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">woolson</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gitlens"><span class="nav-number">1.</span> <span class="nav-text">Gitlens</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vim"><span class="nav-number">2.</span> <span class="nav-text">Vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Line-jumper"><span class="nav-number">3.</span> <span class="nav-text">Line-jumper</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Beautify"><span class="nav-number">4.</span> <span class="nav-text">Beautify</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EditorConfig-for-VS-Code"><span class="nav-number">5.</span> <span class="nav-text">EditorConfig for VS Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Guides"><span class="nav-number">6.</span> <span class="nav-text">Guides</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Material-Icon-Theme"><span class="nav-number">7.</span> <span class="nav-text">Material Icon Theme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vetur"><span class="nav-number">8.</span> <span class="nav-text">Vetur</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐主题：github-plus"><span class="nav-number">9.</span> <span class="nav-text">推荐主题：github plus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完事"><span class="nav-number">10.</span> <span class="nav-text">完事</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#2018-07-31更新"><span class="nav-number"></span> <span class="nav-text">2018-07-31更新</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Todo-Tree"><span class="nav-number">1.</span> <span class="nav-text">Todo Tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TODO-Highlight"><span class="nav-number">2.</span> <span class="nav-text">TODO Highlight</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">woolson</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/vscode-extensions.html';
+          this.page.identifier = 'vscode-extensions.html';
+          this.page.title = 'VS-Code插件推荐';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

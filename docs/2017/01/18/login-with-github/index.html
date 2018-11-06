@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="nodejs,后端,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="说起来真是糟心，国内的三方登录大部分都是比较规范的oAuth。但是恶心就恶心在如果正式使用，网站必须有备案。唉，算了，看来也只有国外的没这个变态的要求了。 在 Github 上注册一个APP打开 Github 上个人 Setting   这个中间改过版本，之前名字是applications```了。1234567891011点进去新建一个app然后填写对应的信息，这里不再赘述。# 在网站上配置">
+<meta name="keywords" content="nodejs,后端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NodeJS使用Github第三方登录[OAuth]">
+<meta property="og:url" content="http://yoursite.com/2017/01/18/login-with-github/index.html">
+<meta property="og:site_name" content="woolson&#39;s blog">
+<meta property="og:description" content="说起来真是糟心，国内的三方登录大部分都是比较规范的oAuth。但是恶心就恶心在如果正式使用，网站必须有备案。唉，算了，看来也只有国外的没这个变态的要求了。 在 Github 上注册一个APP打开 Github 上个人 Setting   这个中间改过版本，之前名字是applications```了。1234567891011点进去新建一个app然后填写对应的信息，这里不再赘述。# 在网站上配置">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/708e7d29gw1fb25i8kv45j20hg0ls759.jpg =*x300">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/708e7d29gw1fb3d3cygz0j20ec0hwq47.jpg =*x300">
+<meta property="og:updated_time" content="2018-11-06T10:04:59.610Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NodeJS使用Github第三方登录[OAuth]">
+<meta name="twitter:description" content="说起来真是糟心，国内的三方登录大部分都是比较规范的oAuth。但是恶心就恶心在如果正式使用，网站必须有备案。唉，算了，看来也只有国外的没这个变态的要求了。 在 Github 上注册一个APP打开 Github 上个人 Setting   这个中间改过版本，之前名字是applications```了。1234567891011点进去新建一个app然后填写对应的信息，这里不再赘述。# 在网站上配置">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/708e7d29gw1fb25i8kv45j20hg0ls759.jpg =*x300">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/01/18/login-with-github/">
+
+
+
+
+
+  <title>NodeJS使用Github第三方登录[OAuth] | woolson's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">woolson's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-h-square"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-projects">
+          <a href="/projects/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-product-hunt"></i> <br>
+            
+            项目
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/18/login-with-github/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="woolson">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="woolson's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">NodeJS使用Github第三方登录[OAuth]</h2>
+        
+
+        <div class="post-meta">
+          
+
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-18T20:00:00+08:00">
+                2017-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/01/18/login-with-github/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/01/18/login-with-github/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>  说起来真是糟心，国内的三方登录大部分都是比较规范的oAuth。但是恶心就恶心在如果正式使用，网站必须有备案。唉，算了，看来也只有国外的没这个变态的要求了。</p>
+<h1 id="在-Github-上注册一个APP"><a href="#在-Github-上注册一个APP" class="headerlink" title="在 Github 上注册一个APP"></a>在 <a href="https://github.com/" target="_blank" rel="noopener">Github</a> 上注册一个APP</h1><p>打开 Github 上个人 Setting</p>
+<p><img src="http://ww1.sinaimg.cn/large/708e7d29gw1fb25i8kv45j20hg0ls759.jpg =*x300" alt="setting1"> <img src="http://ww3.sinaimg.cn/large/708e7d29gw1fb3d3cygz0j20ec0hwq47.jpg =*x300" alt="setting2"></p>
+<p>这个中间改过版本，之前名字是<figure class="highlight plain"><figcaption><span>applications```了。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">点进去新建一个app然后填写对应的信息，这里不再赘述。</span><br><span class="line"></span><br><span class="line"># 在网站上配置授权登录</span><br><span class="line"></span><br><span class="line">开始</span><br><span class="line"></span><br><span class="line">## 1、进入授权链接构建</span><br><span class="line"></span><br><span class="line">```shell</span><br><span class="line"># 请求URL</span><br><span class="line">https://github.com/login/oauth/authorize</span><br></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数名</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:left">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">client_id</td>
+<td style="text-align:center">String</td>
+<td style="text-align:left">注册App时官方分配的</td>
+</tr>
+<tr>
+<td style="text-align:left">redirect_uri</td>
+<td style="text-align:center">String</td>
+<td style="text-align:left">用户授权后带着code跳转的链接地址(如：<a href="http://www.woolson.cn/github/callback" target="_blank" rel="noopener">http://www.woolson.cn/github/callback</a>)</td>
+</tr>
+<tr>
+<td style="text-align:left">scope</td>
+<td style="text-align:center">String</td>
+<td style="text-align:left">控制需要获取权限的范围，具体看<a href="https://developer.github.com/v3/oauth/#scopes" target="_blank" rel="noopener">API</a>，第三方登录的这里就不用传这个参数就行了</td>
+</tr>
+<tr>
+<td style="text-align:left">state</td>
+<td style="text-align:center">String</td>
+<td style="text-align:left">这参数会在Github重定向的时候带着，用来判断获取信息请求是否被其他人拦截返回，可随机生成一段</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 构建下面这个样链接</span><br><span class="line">https://github.com/login/oauth/authorize?client_id=$&#123;client_id&#125;&amp;redirect_uri=$&#123;redirect_uri&#125;&amp;state=$&#123;state&#125;</span><br></pre></td></tr></table></figure>
+<p>可在前端放置一枚按钮，直接 <figure class="highlight plain"><figcaption><span>到此链接，然后会跳转至Github的授权页授权</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 后端处理获取用户信息</span><br><span class="line"></span><br><span class="line">用户授权后跳转至 ```redirect_uri``` 后端路由处理拿到的 ```code``` 换取 ```access_token```(获取用户信息关键)</span><br><span class="line"></span><br><span class="line">code会带在```redirect_uri```后面，使用路由中 ```request.query.code``` 获取</span><br><span class="line"></span><br><span class="line">`http://www.woolson.cn/github/callback?code=*****&amp;state=*****`</span><br><span class="line"></span><br><span class="line">下面用 ```code``` 获取 ```access_token</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>我直接使用 NodeJS 的 <a href="https://github.com/request/request" target="_blank" rel="noopener">Request</a> 模块直接后端操作，so redirect_uri就不用了</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 请求URL</span><br><span class="line">https://github.com/login/oauth/access_token</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数名</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:left">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">client_id</td>
+<td style="text-align:center">String</td>
+<td style="text-align:left">注册App时官方分配的</td>
+</tr>
+<tr>
+<td style="text-align:left">client_secret</td>
+<td style="text-align:center">String</td>
+<td style="text-align:left">注册App时官方分配的</td>
+</tr>
+<tr>
+<td style="text-align:left">code</td>
+<td style="text-align:center">String</td>
+<td style="text-align:left">刚刚那个code</td>
+</tr>
+<tr>
+<td style="text-align:left">state</td>
+<td style="text-align:center">String</td>
+<td style="text-align:left">在第一步中带的state，现在继续带上(其实不带入也可以的)</td>
+</tr>
+</tbody>
+</table>
+<p>用 <figure class="highlight plain"><figcaption><span>发送请求拿 ```token```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">const param = &#123;</span><br><span class="line">  url: &quot;https://github.com/login/oauth/access_token&quot;,</span><br><span class="line">  client_id: &quot;&#123;client_id&#125;&quot;,</span><br><span class="line">  client_secret: &quot;&#123;client_secret&#125;&quot;,</span><br><span class="line">  code: req.query.code,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">request(fetchUrlwithParams(param), (err, response, body) =&gt; &#123;</span><br><span class="line">  body = JSON.parse(body)</span><br><span class="line">  body.access_token // 这个就是需要拿到的token</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>用 <figure class="highlight plain"><figcaption><span>获取 ```user``` 的信息</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; 注意：需要在请求中加入请求头 ```User-Agent``` 并且值为你APP的名称</span><br><span class="line"></span><br><span class="line">```shell</span><br><span class="line"># 请求URL</span><br><span class="line">https://api.github.com/user</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数名</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:left">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">access_token</td>
+<td style="text-align:center">String</td>
+<td style="text-align:left">只需要带上上一步返回的access_token即可</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(body.access_token) &#123;</span><br><span class="line">  <span class="keyword">const</span> param = &#123;</span><br><span class="line">    url: <span class="string">"https://api.github.com/user?access_token="</span> + body.access_token,</span><br><span class="line">    headers: &#123;</span><br><span class="line">      <span class="string">"User-Agent"</span>: <span class="string">"app name"</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  request(param, (err, response, body) =&gt; &#123;</span><br><span class="line">    body = <span class="built_in">JSON</span>.parse(body)</span><br><span class="line">    <span class="keyword">if</span>(!body.message) insertGithub(req, res, body)</span><br><span class="line">    <span class="keyword">else</span> res.redirect(<span class="string">"/study"</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;<span class="keyword">else</span> res.redirect(<span class="string">"/"</span>)</span><br></pre></td></tr></table></figure>
+<p>如上，如果获取用户信息失败，会在返回信息中带有 <figure class="highlight plain"><figcaption><span>字段。获取正常，存储用户信息；获取失败，重定向到网站首页。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## 存储用户信息和种cookie</span><br><span class="line"></span><br><span class="line">&gt; 1、这一步是为啥呢，因为不可能每次打开网站都进行一次授权。小网站做登录有点矫情。</span><br><span class="line">&gt; 2、保存用户信息。怕保存数据量太大，对需要的信息保存一下。（本网站没保存任何敏感信息，只有名称和Github主页）</span><br><span class="line">&gt; 3、种植cookie，在浏览器中种上类似于ID的东西，用户访问就带上，类似于记住我的功能一样。等过期了，再让用户授权一次。</span><br><span class="line"></span><br><span class="line">可以使用Mongodb，进行数据保存，这里不做赘述。</span><br><span class="line">种植 ```cookie``` 就是在重定向到网站的时候在 ```Response``` 中带上 ```cookie</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> param = &#123;</span><br><span class="line">  domain: <span class="string">".woolson.cn"</span>,</span><br><span class="line">  maxAge: <span class="number">5184000000</span>,</span><br><span class="line">  httpOnly: <span class="literal">false</span>,</span><br><span class="line">  secure: <span class="literal">false</span>,</span><br><span class="line">  path: <span class="string">"/"</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">user.save(<span class="function">(<span class="params">err, docs</span>) =&gt;</span> &#123;</span><br><span class="line">  res.cookie(<span class="string">"user"</span>, hashs.nameHash, param)</span><br><span class="line">  res.redirect(<span class="string">"/study"</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>种上cookie以后就是取 <figure class="highlight plain"><figcaption><span>Nodejs 需要在App上使用 [```cookie-parser```](https://github.com/expressjs/cookie-parser) Like this:</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">import cookieParser from &quot;cookie-parser&quot;</span><br><span class="line">app.use(cookieParser())</span><br></pre></td></tr></table></figure></p>
+<p>然后在以后的请求中获取 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&gt; 在保存的时候种的cookie，里面带有你用户的ID用来取用户信息的。</span><br><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">app.get(&quot;/oauth/login&quot;, (req, res) =&gt; &#123;</span><br><span class="line">  const userID = req.cookies.user</span><br><span class="line">  if(userID) getLoginUser(req, res)</span><br><span class="line">  else jsonWrite(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>这样就能拿到信息啦……其实后面说的都比较简单，具体实现可以根据实际情况。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nodejs/" rel="tag"># nodejs</a>
+          
+            <a href="/tags/后端/" rel="tag"># 后端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/01/md-in-nodejs/" rel="next" title="在NodeJS中使用markdown-js模块解析md文件">
+                <i class="fa fa-chevron-left"></i> 在NodeJS中使用markdown-js模块解析md文件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/20/pre-load/" rel="prev" title="前端性能优化－预加载技术">
+                前端性能优化－预加载技术 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">woolson</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#在-Github-上注册一个APP"><span class="nav-number">1.</span> <span class="nav-text">在 Github 上注册一个APP</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">woolson</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/01/18/login-with-github/';
+          this.page.identifier = '2017/01/18/login-with-github/';
+          this.page.title = 'NodeJS使用Github第三方登录[OAuth]';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

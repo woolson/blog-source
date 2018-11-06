@@ -77,8 +77,8 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: git@github.com:woolson/woolson.github.io.git
-  branch: master
-  extend_dirs: docs
+# deploy:
+#   type: git
+#   repo: git@github.com:woolson/woolson.github.io.git
+#   branch: master
+#   extend_dirs: docs

@@ -2,6 +2,8 @@
 layout: post
 title: 在NodeJS中使用markdown-js模块解析md文件
 date: 2016-08-01 20:00
+categories:
+  - 原创
 tags:
 - nodejs
 - 后端
@@ -9,6 +11,8 @@ tags:
 
 首先是安装markdown-js模块
 > npm install markdown-js
+
+<!-- more -->
 
 # 在路由文件中定义所要访问的文章路径
 

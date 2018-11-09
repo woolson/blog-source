@@ -2,6 +2,8 @@
 layout: post
 title: 配置ssh的config文件实现多秘钥管理
 date: 2016-08-01 20:00
+categories:
+  - 原创
 tags:
 - 笔记
 ---
@@ -10,6 +12,8 @@ tags:
 然后我看了下自己的 [Github](https://github.com/993162337)……空白上几个小绿点……
 我想了想，真是日了**了，我也没少往G上填代码啊，咋都空白的呢。然后看了下G官方对 [Contribution 规则](https://help.github.com/articles/why-are-my-contributions-not-showing-up-on-my-profile)的介绍。
 其他的条件我就不说了，我的问题在于我电脑里面的ssh秘钥是公司的，用的公司邮箱，不是我自己Github邮箱，所以提交了代码不算Contribution。我需要在公司用公司的秘钥，github上用自己的邮箱。
+
+<!-- more -->
 
 # 直接操作（ 我用的是MacOS ）
 因为使用了多秘钥，每个秘钥的邮箱是不一样的，所以要取消掉全局的账户设置

@@ -22,6 +22,7 @@ permalink_defaults:
 source_dir: source
 public_dir: docs
 tag_dir: tags
+projects_dir: projects
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code

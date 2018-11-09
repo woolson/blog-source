@@ -50,18 +50,21 @@
   text-align: left;
 
   a {
-    padding: 0;
-    font-size: $font-size-base;
+    // padding: 0;
+    font-size: $font-size-base - 2;
     //color: $grey-dim;
     background: none;
     border: none;
-    border-bottom: 2px solid $grey-dim;
+    border: 1px solid $text;
     transition-property: border;
 
     +mobile() { font-size: $font-size-small; }
     +desktop-large() { font-size: $font-size-large; }
 
 
-    &:hover { border-bottom-color: $green-main; }
+    &:hover {
+      border-color: transparent;
+      border-radius: 3px;
+    }
   }
 }

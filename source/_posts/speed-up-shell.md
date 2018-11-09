@@ -2,11 +2,15 @@
 layout: post
 title: 减少nvm对shell启动速度的影响
 date: 2018-07-02 20:00
+categories:
+  - 原创
 tags:
 - 笔记
 ---
 
 > 从事前端开发或者 `nodejs` 开发，难免遇到 `nodejs` 多版本切换。如果使用官方的 `pkg` 安装的话，切换版本比较麻烦。目前有两个比较热门的版本切换工具: `n` 和 `nvm`。
+
+<!-- more -->
 
 # 问题
 

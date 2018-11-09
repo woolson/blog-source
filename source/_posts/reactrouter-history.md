@@ -2,6 +2,8 @@
 layout: post
 title: React-router 2.X 中使用browserHistory
 date: 2016-07-21 19:30
+categories:
+  - 原创
 tags:
   - 前端
 ---
@@ -10,6 +12,7 @@ tags:
 
 __实现的原理就是后端服务器除了API其他的路由访问都返回index.html，路由匹配交给前端啦__
 
+<!-- more -->
 
 我们先从前端切入吧，前端配置比较简单。
 

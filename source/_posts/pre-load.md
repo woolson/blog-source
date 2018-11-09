@@ -1,7 +1,9 @@
 ---
 layout: post
-title: 前端性能优化－预加载技术
+title: 【转载】前端性能优化－预加载技术
 date: 2018-05-20 20:00
+categories:
+  - 转载
 tags:
   - 前端
   - 转载
@@ -10,11 +12,14 @@ tags:
 [原文地址](https://blog.csdn.net/franktaoge/article/details/51473823)
 当我们谈到前端的性能时，总是会提到比如合并、压缩、缓存或者在服务器上开启gzip之类的，目的都是为了让页面加载的更快。资源预拉取（`prefetch`）则是另一种性能优化的技术。通过预拉取可以告诉浏览器用户在未来可能用到哪些资源。
 
+<!-- more -->
+
 `Pre-fetching`会提示浏览器那些未来一定或可能使用到的资源，有时在当前页面见效，有些则在未来可能打开的页面生效。 作为开发者，我们比浏览器更懂自己的应用。我们可以利用这些技术提前告知浏览器web中用到的核心资源。
 
 以前这种实践也被称为`prebrowsing`。但这并不是一种单一的技术，实际上可以拆分成很多小点：`dns-prefetch`, `subresource`, `prefetch`, `preconnect`, 和 `prerender`。
 
 # DNS prefetch
+
 `DNS prefetching`通过指定具体的URL来告知客户端未来会用到相关的资源，这样浏览器可以尽早的解析DNS。比如我们需要一个在`example.com`的图片或者视频文件。在`<head>`就可以这么写：
 
 ```html

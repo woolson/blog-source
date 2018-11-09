@@ -3,7 +3,7 @@
 #}&copy; {% if theme.footer.since and theme.footer.since != current %}{{ theme.footer.since }} &mdash; {% endif %}{#
 #}<span itemprop="copyrightYear">{{ current }}</span>
   <span class="with-love">
-    <i class="fa fa-{{ theme.footer.icon }}"></i>
+    <i class="fa fa-{{ theme.footer.icon }}" style="color:#D73A49"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright || config.author }}</span>
 
@@ -19,6 +19,17 @@
     #}{{ totalcount(site, '0,0.0a') }}{#
   #}</span>
   {% endif %}
+</div>
+
+<div>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <span id="busuanzi_container_site_pv" style='display:none'>
+    <span id="busuanzi_value_site_pv"></span> 来过
+    <span class="post-meta-divider">、</span>
+  </span>
+  <span id="busuanzi_container_site_uv" style='display:none'>
+    <span id="busuanzi_value_site_uv"></span>看过
+  </span>
 </div>
 
 {% if theme.footer.powered %}

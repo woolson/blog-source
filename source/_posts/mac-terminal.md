@@ -2,11 +2,15 @@
 layout: post
 title: macOS上使用zsh
 date: 2018-06-29 20:00
+categories:
+  - 原创
 tags:
 - 笔记
 ---
 
 mac自带的 `terminal.app` 默认使用的是 `bash` 在使用起来不太舒服，比如：自动大小写转换、跳转目录、git仓库的信息...等等。`zsh` 能在各方面上对其碾压（后面细说）。再说mac自带的`termianl.app`虽然用上去还可以，推荐一款软件`iTerm.app` 来搭配 `zsh` 使用。这款软件对比`terminal`软件上，优势在于他的分屏功能、插件和主题(oh-my-zsh更优秀)。
+
+<!-- more -->
 
 # zsh介绍
 

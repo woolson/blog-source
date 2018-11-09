@@ -2,6 +2,8 @@
 layout: post
 title: 在Sublime vim模式中配置Line-jump单键快捷键
 date: 2018-09-18 20:00
+categories:
+  - 原创
 tags:
 - 笔记
 ---

@@ -3,6 +3,8 @@ layout: post
 title: VS-Code插件推荐
 date: 2018-06-08 20:00
 top: true
+categories:
+  - 原创
 tags:
   - 笔记
 ---
@@ -17,6 +19,8 @@ M：“Visual Studio Code”
 &ensp;&ensp;&ensp;&ensp;曾经 `Atom` 的外观让我着迷，就算加载速度比较慢，我还是用了很
 长一段时间。但是自从用上了 `VS-code`再也回不去 `Atom` 了，就算他看上去不是那么好看。但
 是他的启动速度和插件的质量，相对来说有一定的优势的。还有一些细节上面的配置更友好。
+
+<!-- more -->
 
 下面就推荐一些我个人觉得不错的插件：
 

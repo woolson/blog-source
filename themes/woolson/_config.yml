@@ -96,7 +96,7 @@ menu:
   # tags: /tags/ || tags
   #categories: /categories/ || th
   archives: /archives/ || book
-  projects: /projects/ || product-hunt
+  # projects: /projects/ || product-hunt
   sources: /sources/ || database
   about: /about/ || user
   #schedule: /schedule/ || calendar

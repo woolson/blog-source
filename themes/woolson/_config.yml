@@ -75,7 +75,7 @@ footer:
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
@@ -98,7 +98,8 @@ menu:
   archives: /archives/ || book
   # projects: /projects/ || product-hunt
   sources: /sources/ || database
-  about: /about/ || user
+  Github: https://github.com/woolson || github
+  # about: /about/ || user
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat

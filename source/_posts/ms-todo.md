@@ -19,7 +19,7 @@ categories:
 
 <!-- more -->
 
-[介绍页面及下载](https://woolson.github.io/microsoft-todo-for-mac/)
+{% centerquote %}**[传送门](https://woolson.github.io/microsoft-todo-for-mac/)**{% endcenterquote %}
 
-![1](https://woolson.github.io/microsoft-todo-for-mac/static/img/etc-05.24ecb63.png)
-![2](https://woolson.github.io/microsoft-todo-for-mac/static/img/etc-06.60f9ae4.png)
+![1](https://woolson.github.io/microsoft-todo-for-mac/static/img/etc-05.fbe0094.png)
+![2](https://woolson.github.io/microsoft-todo-for-mac/static/img/etc-06.0504738.png)

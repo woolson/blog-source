@@ -3,9 +3,10 @@ layout: post
 title: 配置ssh的config文件实现多秘钥管理
 date: 2016-08-01 20:00
 categories:
-  - 原创
+  - 笔记
 tags:
-- 笔记
+  - 原创
+  - linux
 ---
 
 前些天在看各位大牛的 Github 发现他们 [Github](https://github.com/993162337) 的 Contribution 基本上绿油油的一片，甚是好看。
@@ -23,7 +24,7 @@ git config --unset --global user.name
 git config --unset --global user.email
 ```
 
-首先你肯定有几个秘钥对放在/User/**/.ssh/目录下...  
+首先你肯定有几个秘钥对放在/User/**/.ssh/目录下...
 如果没有的话，可以现在生成。先把已有的修改名称：
 
 ```ssh-keygen -t rsa -C "woolson.lee@gmail.com"```
@@ -32,8 +33,8 @@ git config --unset --global user.email
 
 看下里面会有两个id_rsa秘钥对，名字完全可以随意。
 
-> 在生成秘钥后，需要执行```ssh-add id_rsa```添加刚刚生成的秘钥  
-> 但是，这样只是添加秘钥到ssh的sesison中，电脑重启后ssh就session就失效了，还需要再添加一次。  
+> 在生成秘钥后，需要执行```ssh-add id_rsa```添加刚刚生成的秘钥
+> 但是，这样只是添加秘钥到ssh的sesison中，电脑重启后ssh就session就失效了，还需要再添加一次。
 > 查询之后，找到一个永久添加的方法即: ```ssh-add -K id_rsa```。
 
 
@@ -61,7 +62,7 @@ Host github_work_13
 
 
 # 配置完成，可以测试是否可以正常使用
-配置好以后可以使用```ssh```登录你的服务器或者```pull```远程代码  
+配置好以后可以使用```ssh```登录你的服务器或者```pull```远程代码
 如果不行的话，可以尝试重启一下```ssh```的服务。
 
 可以使用命令行...

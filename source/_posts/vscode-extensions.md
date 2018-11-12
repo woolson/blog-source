@@ -3,9 +3,10 @@ layout: post
 title: VS-Code插件推荐
 date: 2018-09-08 20:00
 categories:
-  - 原创
-tags:
   - 笔记
+tags:
+  - 原创
+  - 编辑器
 ---
 
 U：“你用过最强大的编辑器是什么？”
@@ -25,8 +26,7 @@ M：“Visual Studio Code”
 
 ## Gitlens
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/eamodio/vscode-gitlens/master/images/gitlens-logo.png" alt="GitLens Logo" width="328"/>
+<p align="center"><img src="https://raw.githubusercontent.com/eamodio/vscode-gitlens/master/images/gitlens-logo.png" alt="GitLens Logo" width="328"/>
 </p>
 
 > 主要是组织git提交记录并在你的代码中展示修改人和修改时间，很强大
@@ -35,9 +35,8 @@ M：“Visual Studio Code”
 
 ## Vim
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/VSCodeVim/Vim/master/images/icon.png" height="128" width="128">
-  <br>VS-Code Vim模拟器
+<p align="center"><img src="https://raw.githubusercontent.com/VSCodeVim/Vim/master/images/icon.png" height="128" width="128">
+VS-Code Vim模拟器
 </p>
 
 > 喜欢用vim编辑器的同学必须装的，挺不错的。推荐加一个插件 `line-jumper`
@@ -83,18 +82,16 @@ M：“Visual Studio Code”
 
 ## Beautify
 
-<p align="center">
-  <img src="https://hookyqr.gallerycdn.vsassets.io/extensions/hookyqr/beautify/1.3.0/1516928994563/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
-  <br>代码格式化插件 Beautify
+<p align="center"><img src="https://hookyqr.gallerycdn.vsassets.io/extensions/hookyqr/beautify/1.3.0/1516928994563/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
+代码格式化插件 Beautify
 </p>
 
 > 代码格式化插件，不用多说。
 
 ## EditorConfig for VS Code
 
-<p align="center">
-  <img src="https://editorconfig.gallerycdn.vsassets.io/extensions/editorconfig/editorconfig/0.12.4/1527781734664/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
-  <br>编辑器设置
+<p align="center"><img src="https://editorconfig.gallerycdn.vsassets.io/extensions/editorconfig/editorconfig/0.12.4/1527781734664/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
+编辑器设置
 </p>
 
 > 如果你打开的项目根目录存在 `editorconfig` 文件，则会用文件中的配置覆盖编辑器默认设置
@@ -117,16 +114,15 @@ trim_trailing_whitespace = false
 
 ## Guides
 
-<p align="center">
-  <img src="https://spywhere.gallerycdn.vsassets.io/extensions/spywhere/guides/0.9.1/1511022656558/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
-  <br>编辑器缩进导航
+<p align="center"><img src="https://spywhere.gallerycdn.vsassets.io/extensions/spywhere/guides/0.9.1/1511022656558/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
+编辑器缩进导航
 </p>
 
 > 用来扩展编辑器缩进导航显示，可以自定义的样式也很多
 
 ![官方](https://github.com/spywhere/vscode-guides/raw/master/images/screenshot.png)
 
-自定义样式  
+自定义样式
 
 ![](http://ww1.sinaimg.cn/large/708e7d29gy1fs6i2zird5j219o0kcjx5)
 
@@ -197,9 +193,8 @@ trim_trailing_whitespace = false
 
 ## Material Icon Theme
 
-<p align="center">
-  <img src="https://pkief.gallerycdn.vsassets.io/extensions/pkief/material-icon-theme/3.5.0/1527764102171/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
-  <br>资源管理器中文件图标
+<p align="center"><img src="https://pkief.gallerycdn.vsassets.io/extensions/pkief/material-icon-theme/3.5.0/1527764102171/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
+资源管理器中文件图标
 </p>
 
 > 该插件提供了大量的图标，还可以自己自定义图标。
@@ -219,52 +214,57 @@ trim_trailing_whitespace = false
 
 ## Vetur
 
-<p align="center">
-  <img src="https://octref.gallerycdn.vsassets.io/extensions/octref/vetur/0.12.5/1528324426695/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
-  <br>Vetur 用vue开发必装插件
+<p align="center"><img src="https://octref.gallerycdn.vsassets.io/extensions/octref/vetur/0.12.5/1528324426695/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
+Vetur 用vue开发必装插件
 </p>
 
 > 如果你是VUE的使用者，这个插件必选啊
 
 ## 推荐主题：github plus
 
-<p align="center">
-  <img src="https://thenikso.gallerycdn.vsassets.io/extensions/thenikso/github-plus-theme/1.1.3/1526373532357/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
-  <br>Github Plus Theme
+<p align="center"><img src="https://thenikso.gallerycdn.vsassets.io/extensions/thenikso/github-plus-theme/1.1.3/1526373532357/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
+Github Plus Theme
 </p>
 
 > 以前都是喜欢用暗色系的主题，久了后想换个亮一点的主题，然后找了一圈，这个主题真是超级喜欢。
 
 ![github](https://github.com/thenikso/github-plus-theme/raw/master/screenshot.jpg)
 
-## 完事
-
-&ensp;&ensp;&ensp;&ensp;插件暂时介绍到这，后面有好用的再做推荐。这里推一个自己开发的基于新浪微博上传图片软件（有mac和win），具体查看[这里](https://woolson.github.io/weibo-img/#/)。
-
-<p align="center">
-  <img src="https://woolson.github.io/weibo-img/static/img/etc-1.4fce764.png" width="650">
-</p>
-
-# 2018-07-31更新
+## ---2018-07-31更新---
 
 ## Todo Tree
 
-<p align="center">
-  <img src="https://gruntfuggly.gallerycdn.vsassets.io/extensions/gruntfuggly/todo-tree/0.0.73/1532952758588/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
-  <br>Todo Tree
+<p align="center"><img src="https://gruntfuggly.gallerycdn.vsassets.io/extensions/gruntfuggly/todo-tree/0.0.73/1532952758588/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
+Todo Tree
 </p>
 
 > 列出项目中所有的TODO，侧面把握项目的完成度。点击可打开对应文件和TODO所在位置。
 
 ![官方](https://raw.githubusercontent.com/Gruntfuggly/todo-tree/master/resources/screenshot.png)
 
-## TODO Highlight
+## Todo Highlight
 
-<p align="center">
-  <img src="https://wayou.gallerycdn.vsassets.io/extensions/wayou/vscode-todo-highlight/1.0.4/1532254554587/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
-  <br>TODO Highlight
+<p align="center"><img src="https://wayou.gallerycdn.vsassets.io/extensions/wayou/vscode-todo-highlight/1.0.4/1532254554587/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
+TODO Highlight
 </p>
 
 > 高亮打开的页面中所有TODO，看上去更清爽。
 
 ![官方](https://github.com/wayou/vscode-todo-highlight/raw/master/assets/material-night.png)
+
+## ---2018-11-12更新---
+
+## Insert Date String
+
+<p align="center"><img src="https://jsynowiec.gallerycdn.vsassets.io/extensions/jsynowiec/vscode-insertdatestring/2.2.3/1532979379716/Microsoft.VisualStudio.Services.Icons.Default" height="128" width="128">
+Insert Date String
+</p>
+
+用于在编辑器中插入当前的日期和时间，很方便
+
+## 完事
+
+&ensp;&ensp;&ensp;&ensp;插件暂时介绍到这，后面有好用的再做推荐。这里推一个自己开发的基于新浪微博上传图片软件（有mac和win），具体查看[这里](https://woolson.github.io/weibo-img/#/)。
+
+<p align="center"><img src="https://woolson.github.io/weibo-img/static/img/etc-1.4fce764.png" width="650">
+</p>

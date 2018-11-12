@@ -3,10 +3,10 @@ layout: post
 title: NodeJS使用Github第三方登录[OAuth]
 date: 2017-01-18 20:00
 categories:
-  - 原创
+  - 笔记
 tags:
-- nodejs
-- 后端
+  - nodejs
+  - 后端
 ---
 
 说起来真是糟心，国内的三方登录大部分都是比较规范的`oAuth`。但是恶心就恶心在如果正式使用，网站必须有备案。唉，算了，看来也只有国外的没这个变态的要求了。

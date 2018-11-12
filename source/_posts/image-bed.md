@@ -1,10 +1,14 @@
 ---
-title: 基于微博图床图片链接macOS客户端
-top: true
-date: 2018-11-10 15:44:43
+title: 基于微博图床图片链接macOS App
+date: 2018-04-18 20:23:58
+recommend: true
 categories:
+  - 项目
+tags:
   - 原创
-  - 软件
+  - 分享
+  - 微博图床
+  - electron
 ---
 
 使用 `electron` 和 `vue` 封装的APP，用于上传图片到微博图床获取图片链接：

@@ -161,22 +161,11 @@
       <!--/noindex-->
       {% endif %}
 
-      <section class="sit-recommend motion-element">
-        <h4>本站推荐</h4>
-        <ul>
-          {% for post in site.posts %}
-            {% if post.recommend %}
-              <li>&bull;&nbsp;<a href="{{ post.path }}">{{ post.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </section>
-
       {% if theme.sidebar.b2t %}
         <div class="back-to-top">
           <i class="fa fa-arrow-up"></i>
           {% if theme.sidebar.scrollpercent %}
-            <span id"scrollpercent"><span>0</span>%</span>
+            <span id="scrollpercent"><span>0</span>%</span>
           {% endif %}
         </div>
       {% endif %}

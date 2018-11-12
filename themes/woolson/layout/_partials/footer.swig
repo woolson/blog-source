@@ -7,20 +7,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright || config.author }}</span>
 
-  <span>
-    <span class="post-meta-divider">|</span>
-    <a href="https://github.com/woolson" style="color:#666;border:none">
-      <i class="fa fa-github"></i>
-      &nbsp;Github
-    </a>
-  </span>
-
-  <span>
-    <span class="post-meta-divider">|</span>
-    <i class="fa fa-envelope"></i>
-    &nbsp;woolson.lee@gmail.com
-  </span>
-
   {% if theme.post_wordcount.totalcount %}
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
@@ -36,10 +22,25 @@
 </div>
 
 <div>
+  <span>
+    <a href="https://github.com/woolson" target="_blank" style="color:#666;border:none">
+      <i class="fa fa-github"></i>
+      &nbsp;woolson's github
+    </a>
+  </span>
+
+  <span>
+    <span class="post-meta-divider">|</span>
+    <i class="fa fa-envelope"></i>
+    &nbsp;woolson.lee@gmail.com
+  </span>
+</div>
+
+<div>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <span id="busuanzi_container_site_pv" style='display:none'>
     <span id="busuanzi_value_site_pv"></span> 次浏览
-    <span class="post-meta-divider">、</span>
+    <span class="post-meta-divider">|</span>
   </span>
   <span id="busuanzi_container_site_uv" style='display:none'>
     <span id="busuanzi_value_site_uv"></span> 人看过

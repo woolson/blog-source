@@ -3,7 +3,7 @@ layout: post
 title: 使用eslint VScode错误提示和保存修复
 date: 2018-06-07 20:00
 categories:
-  - 原创
+  - 笔记
 tags:
   - 前端
 ---
@@ -105,7 +105,7 @@ module.exports = {
 ### Extends->standard
 
 > 版本：11.0.0
-> npm: [eslint-config-standard](https://standardjs.com/readme-zhcn.html)  
+> npm: [eslint-config-standard](https://standardjs.com/readme-zhcn.html)
 > 官方网站: https://standardjs.com/readme-zhcn.html
 
 除了 `standard` 预置配置还有:
@@ -114,7 +114,7 @@ module.exports = {
 - [eslint-config-react-app](https://www.npmjs.com/package/eslint-config-react-app)
 - [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier)等
 
-&ensp;&ensp;&ensp;&ensp;当然，如果预置的规则不适用或者单纯的不喜欢，那你可以在 `rule` 
+&ensp;&ensp;&ensp;&ensp;当然，如果预置的规则不适用或者单纯的不喜欢，那你可以在 `rule`
 字段进行自定义配置。具体配置可参考，[官方文档](http://eslint.cn/docs/rules/)、[Eslint 从入门到放弃](https://www.jianshu.com/p/22e6197e5cff)
 
 ```javascript
@@ -142,7 +142,7 @@ module.exports = {
 ### Plugins->vue
 
 > 版本：4.5.0
-> npm: [eslint-plugin-vue](https://www.npmjs.com/package/eslint-plugin-vue)  
+> npm: [eslint-plugin-vue](https://www.npmjs.com/package/eslint-plugin-vue)
 > 文档: https://www.npmjs.com/package/eslint-plugin-vue
 
 __Extends__ 字段只要设置后即可，但是 `eslint-plugin-vue` 设置
@@ -156,7 +156,7 @@ __Extends__ 字段只要设置后即可，但是 `eslint-plugin-vue` 设置
 此插件提供了4个等级代码风格检查，后一等级在前一等级的规则上添加更多的限制。具体添加了哪些
 规则请查看[文档](https://www.npmjs.com/package/eslint-plugin-vue)。
 
-__注意：__  
+__注意：__
 &ensp;&ensp;&ensp;&ensp; `eslint-plugin-vue` 插件目前支持检查 `lang="html"` 的
 `<template>`，也就是说 `lang="pug"` 检查就失效了。`<style>`标签目前也不支持。作者表示
 会在未来版本中添加对 `<template lang="pug">` 和 `<style>` 的代码检查支持。

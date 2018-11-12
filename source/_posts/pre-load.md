@@ -3,10 +3,10 @@ layout: post
 title: 【转载】前端性能优化－预加载技术
 date: 2018-05-20 20:00
 categories:
-  - 转载
+  - 笔记
 tags:
-  - 前端
   - 转载
+  - 前端
 ---
 
 [原文地址](https://blog.csdn.net/franktaoge/article/details/51473823)

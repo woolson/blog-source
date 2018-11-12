@@ -31,9 +31,15 @@ html, body { height: 100%; }
 .main-inner {
   margin: 0 auto;
   width: $content-desktop;
+  position relative
 
   +desktop-large() {
     .container & { width: $content-desktop-large; }
+  }
+  +desktop() {
+    .content-wrap {
+      margin-right 250px
+    }
   }
 }
 

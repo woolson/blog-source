@@ -1,10 +1,14 @@
 ---
 title: 基于微软todo网页封装的macOS App
-top: true
 date: 2018-11-09 23:56:34
+recommend: true
 categories:
+  - 项目
+tags:
   - 原创
-  - 软件
+  - 分享
+  - 微软
+  - electron
 ---
 
 微软出品——简洁清爽的 `TODO` 清单免费软件，个人比较喜欢，但微软很🐔贼，可能为了给 `windows` 招揽用户……

@@ -3,9 +3,10 @@ layout: post
 title: 在Sublime vim模式中配置Line-jump单键快捷键
 date: 2018-06-18 20:00
 categories:
-  - 原创
+  - 笔记
 tags:
-- 笔记
+  - 原创
+  - 编辑器
 ---
 
 vim模式下有快捷键翻页，翻半页的快捷键，但是有时候我们并不想跳俺么多行。所以就找了个跳行的插件```LineJumper```，挺不错的。在配置快捷键的时候遇到问题了。
@@ -16,16 +17,16 @@ vim模式下有快捷键翻页，翻半页的快捷键，但是有时候我们�
 
 ```json
 {
-    "keys": ["m"],
-    "command": "line_jumper",
-    "context": [
-        { "key": "setting.command_mode", "operand": true },
-    ],
-    "args": {
-        "number_of_lines": 10,
-        "cmd": "up",
-        "insert_mode": false
-    }
+  "keys": ["m"],
+  "command": "line_jumper",
+  "context": [
+    { "key": "setting.command_mode", "operand": true },
+  ],
+  "args": {
+    "number_of_lines": 10,
+    "cmd": "up",
+    "insert_mode": false
+  }
 }
 ```
 

@@ -3,9 +3,9 @@ layout: post
 title: React-router 2.X 中使用browserHistory
 date: 2016-07-21 19:30
 categories:
-  - 原创
-tags:
   - 前端
+tags:
+  - 原创
 ---
 
 之前开发一直都有使用react-router。使用的hashHistory（看上去有点丑，不简洁）。因为项目都不是SPA的，所以没遇到什么坑。但是现在呢，公司一个SPA项目需要后端Redirect URL，hashHistory就不方便了。于是准备使用browserHistory。先看了下官方的[Historise](https://github.com/ReactTraining/react-router/blob/master/docs/guides/Histories.md)。还是蛮简单明了的。
@@ -38,7 +38,7 @@ app.get("*", (req, res) => {
 })
 ```
 
-> 这个配置需要放在其他路由或者后端API的后面，不然的话会造成前端访问API无法正确拿到数据  
+> 这个配置需要放在其他路由或者后端API的后面，不然的话会造成前端访问API无法正确拿到数据
 可以在前端路由中加入通配符匹配不存在的路径显示404页面，增加体验
 
 # 在Tomcat后端服务中配置
